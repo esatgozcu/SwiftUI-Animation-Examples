@@ -11,14 +11,30 @@ struct HomePage: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                NavigationLink(destination: SnowFlakeView()) {
-                    Text("Snow Flake")
+                HomePageItem(title: "Snow Flake", image: "snow_flake") {
+                    SnowFlakeView()
                 }
-                NavigationLink(destination: PaperPlaneView()) {
-                    Text("Paper Plane")
+                HomePageItem(title: "Paper Plane", image: "paper_plane") {
+                    PaperPlaneView()
                 }
             }
             .padding()
+        }
+    }
+}
+
+struct HomePageItem<Content: View>: View {
+    
+    var title : String
+    var image : String
+    var content: () -> Content
+    
+    var body: some View {
+        NavigationLink(destination: content) {
+            Text(title)
+            Image(image)
+                .resizable()
+                .frame(width: 20, height: 20)
         }
     }
 }
