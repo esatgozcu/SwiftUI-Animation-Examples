@@ -14,6 +14,8 @@
 		0B3C46E329BF3A1F00B4B38A /* SnowFlakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C46E229BF3A1F00B4B38A /* SnowFlakeView.swift */; };
 		0B3C46E629BF3AEC00B4B38A /* SnowFlakeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C46E529BF3AEC00B4B38A /* SnowFlakeVM.swift */; };
 		0B3C46EA29BF427900B4B38A /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C46E929BF427900B4B38A /* RandomGenerator.swift */; };
+		0B3C46EC29BF481000B4B38A /* PaperPlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C46EB29BF481000B4B38A /* PaperPlaneView.swift */; };
+		0B3C46EE29BF481700B4B38A /* PaperPlaneVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C46ED29BF481700B4B38A /* PaperPlaneVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		0B3C46E229BF3A1F00B4B38A /* SnowFlakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowFlakeView.swift; sourceTree = "<group>"; };
 		0B3C46E529BF3AEC00B4B38A /* SnowFlakeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowFlakeVM.swift; sourceTree = "<group>"; };
 		0B3C46E929BF427900B4B38A /* RandomGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
+		0B3C46EB29BF481000B4B38A /* PaperPlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperPlaneView.swift; sourceTree = "<group>"; };
+		0B3C46ED29BF481700B4B38A /* PaperPlaneVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperPlaneVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0B3C46E529BF3AEC00B4B38A /* SnowFlakeVM.swift */,
+				0B3C46ED29BF481700B4B38A /* PaperPlaneVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0B3C46E229BF3A1F00B4B38A /* SnowFlakeView.swift */,
+				0B3C46EB29BF481000B4B38A /* PaperPlaneView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B3C46EC29BF481000B4B38A /* PaperPlaneView.swift in Sources */,
 				0B3C46E629BF3AEC00B4B38A /* SnowFlakeVM.swift in Sources */,
 				0B3C46D729BF38E000B4B38A /* HomePage.swift in Sources */,
+				0B3C46EE29BF481700B4B38A /* PaperPlaneVM.swift in Sources */,
 				0B3C46EA29BF427900B4B38A /* RandomGenerator.swift in Sources */,
 				0B3C46E329BF3A1F00B4B38A /* SnowFlakeView.swift in Sources */,
 				0B3C46D529BF38E000B4B38A /* AnimationExamplesApp.swift in Sources */,

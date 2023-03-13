@@ -1,5 +1,5 @@
 //
-//  SnowFlakeView.swift
+//  PaperPlaneView.swift
 //  AnimationExamples
 //
 //  Created by Esat Gözcü on 2023/03/13.
@@ -7,21 +7,21 @@
 
 import SwiftUI
 
-struct SnowFlakeView: View {
+struct PaperPlaneView: View {
     
-    @StateObject var viewModel = SnowFlakeVM()
+    @StateObject var viewModel = PaperPlaneVM()
     @State var action = false
     
     var body: some View {
         GeometryReader { geo in
             ForEach(0..<viewModel.itemSize, id: \.self) { id in
-                Image("snow_flake")
+                Image("paper_plane")
                     .resizable()
                     .frame(width: viewModel.randomSize[id],
-                           height: viewModel.randomSize[id]
+                          height: viewModel.randomSize[id]
                     )
-                    .offset(x: viewModel.randomXList[id],
-                            y: action ? geo.size.height : 0 - viewModel.randomSize[id]
+                    .offset(x: action ? (geo.size.width + viewModel.randomSize[id]) : -viewModel.randomSize[id],
+                            y: action ? (viewModel.randomYList[id] - geo.size.width) : viewModel.randomYList[id]
                     )
                     .animation(
                         .linear(duration: Double(viewModel.randomDurationMillis[id])/1000)
@@ -36,8 +36,9 @@ struct SnowFlakeView: View {
     }
 }
 
-struct SnowFlakeView_Preview: PreviewProvider {
+struct PaperPlaneView_Preview: PreviewProvider {
     static var previews: some View {
-        SnowFlakeView()
+        PaperPlaneView()
     }
 }
+

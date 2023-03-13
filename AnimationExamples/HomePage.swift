@@ -10,9 +10,12 @@ import SwiftUI
 struct HomePage: View {
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 20) {
                 NavigationLink(destination: SnowFlakeView()) {
-                    Text("Simple Animation")
+                    Text("Snow Flake")
+                }
+                NavigationLink(destination: PaperPlaneView()) {
+                    Text("Paper Plane")
                 }
             }
             .padding()
