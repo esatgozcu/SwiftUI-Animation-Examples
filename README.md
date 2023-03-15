@@ -11,4 +11,4 @@ Name|Animation
 --- | ---
 **#[Snow Flake](AnimationExamples/View/SnowFlakeView.swift)** | <img src="https://user-images.githubusercontent.com/35576161/224708845-79ccf255-719a-4270-bf88-154cffb685a3.gif" width="196" height="426"/>
 **#[Paper Plane](AnimationExamples/View/PaperPlaneView.swift)** | <img src="https://user-images.githubusercontent.com/35576161/224709118-1df49758-f0a4-4196-bc18-0e05745f6819.gif" width="196" height="426"/>
-**#[Blink Circle](AnimationExamples/View/BlinkCircleView.swift)** | <img src="https://user-images.githubusercontent.com/35576161/225203436-d463d09a-159e-43e1-a77a-aa9556206e0e.gif" width="196" height="426"/>
+**#[Blink Circle](AnimationExamples/View/BlinkCircleView.swift)** | <img src="https://user-images.githubusercontent.com/35576161/225205663-b6d61363-8a41-48d2-8a4f-4882a0af3d9a.gif" width="196" height="426"/>
