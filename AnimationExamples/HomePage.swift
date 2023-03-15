@@ -23,6 +23,13 @@ struct HomePage: View {
                         .foregroundColor(.black)
                         .frame(width: 20, height: 20)
                 }
+                NavigationLink(destination: CirclesRotationView()) {
+                    Text("Circles Rotation")
+                    Image(systemName: "rotate.3d")
+                        .resizable()
+                        .foregroundColor(.red)
+                        .frame(width: 20, height: 20)
+                }
             }
         }
     }
