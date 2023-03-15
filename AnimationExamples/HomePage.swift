@@ -17,8 +17,13 @@ struct HomePage: View {
                 HomePageItem(title: "Paper Plane", image: "paper_plane") {
                     PaperPlaneView()
                 }
+                NavigationLink(destination: BlinkCircleView()) {
+                    Text("Blink Circles")
+                    Circle()
+                        .foregroundColor(.black)
+                        .frame(width: 20, height: 20)
+                }
             }
-            .padding()
         }
     }
 }
