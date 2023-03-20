@@ -14,7 +14,7 @@ struct CirclesRotationView: View {
     @State private var moveInOut = false
     
     var itemSize = UIScreen.main.bounds.size.width / 2.0
-    var itemCount = 6
+    var itemCount = 3
     var degree : Double {get{ return 360.0/Double(itemCount) }}
     
     var body: some View {

@@ -27,6 +27,7 @@ class ConfettiVM: ObservableObject{
     @Published var confettiSize: CGFloat
     @Published var dropHeight: CGFloat
     @Published var fadesOut: Bool
+    @Published var fireworkEffect: Bool
     @Published var opacity: Double
     @Published var openingAngle: Angle
     @Published var closingAngle: Angle
@@ -42,6 +43,7 @@ class ConfettiVM: ObservableObject{
          confettiSize: CGFloat = 10.0,
          dropHeight: CGFloat = 600.0,
          fadesOut: Bool = true,
+         fireworkEffect: Bool = false,
          opacity: Double = 1.0,
          openingAngle: Angle = .degrees(60),
          closingAngle: Angle = .degrees(120),
@@ -57,6 +59,7 @@ class ConfettiVM: ObservableObject{
         self.confettiSize = confettiSize
         self.dropHeight = dropHeight
         self.fadesOut = fadesOut
+        self.fireworkEffect = fireworkEffect
         self.opacity = opacity
         self.openingAngle = openingAngle
         self.closingAngle = closingAngle

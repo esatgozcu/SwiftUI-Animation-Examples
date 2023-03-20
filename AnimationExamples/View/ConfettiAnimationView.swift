@@ -16,11 +16,30 @@ struct ConfettiAnimationView: View{
             Text("🎉").onTapGesture {
                 counter += 1
             }
-            ConfettiView(counter: $counter)
-            //ConfettiView(counter: $counter, confettiVM: ConfettiVM(confettiNumber: 10, repetitions: 4))
-            //ConfettiView(counter: $counter, confettiVM: ConfettiVM(confettiNumber: 50, repetitions: 5))
-            //ConfettiView(counter: $counter, confettiVM: ConfettiVM(confettiNumber: 50, radius: 600, repetitions: 5))
-            //ConfettiView(counter: $counter, confettiVM: ConfettiVM(openingAngle: Angle(degrees: 0), closingAngle: Angle.degrees(360)))
+            /* Default */
+            //ConfettiView(counter: $counter)
+            
+            /* FireworkEffect */
+            /*ConfettiView(counter: $counter,
+                         confettiVM: ConfettiVM(confettiNumber: 40,
+                                                fireworkEffect: true,
+                                                openingAngle: Angle(degrees: 0),
+                                                closingAngle: Angle(degrees: 360),
+                                                radius: 200.0))*/
+            /* Emoji - Text */
+            /*ConfettiView(counter: $counter, confettiVM: ConfettiVM(confettiNumber: 10,
+                                                                   confettiTypes: [
+                                                                    .text("❤️"),
+                                                                    .text("💙"),
+                                                                    .text("A")],
+                                                                   confettiSize: 30))*/
+            /* Image */
+            /*ConfettiView(counter: $counter, confettiVM: ConfettiVM(confettiNumber: 10,
+                                                                   confettiTypes: [
+                                                                    .sfSymbol(symbolName: "star.fill"),
+                                                                    .sfSymbol(symbolName: "arrow.triangle.2.circlepath"),
+                                                                    .sfSymbol(symbolName: "square.and.arrow.up")],
+                                                                   confettiSize: 30, explosionAnimDuration: 0.7))*/
         }
     }
 }
@@ -129,7 +148,10 @@ struct ConfettiFrame: View{
         return 0.2 + confettiVM.explosionAnimationDuration + getRandomExplosionTimeVariation()
     }
     func getDistance() -> CGFloat {
-        return pow(CGFloat.random(in: 0.01...1), 2.0/7.0) * confettiVM.radius
+        if !confettiVM.fireworkEffect{
+            return pow(CGFloat.random(in: 0.01...1), 2.0/7.0) * confettiVM.radius
+        }
+        return confettiVM.radius
     }
     func getDelayBeforeRainAnimation() -> TimeInterval {
         confettiVM.explosionAnimationDuration *  0.1
