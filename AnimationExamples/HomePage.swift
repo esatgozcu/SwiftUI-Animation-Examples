@@ -30,7 +30,7 @@ struct HomePage: View {
                         .foregroundColor(.red)
                         .frame(width: 20, height: 20)
                 }
-                NavigationLink(destination: ConfettiAnimationView()) {
+                NavigationLink(destination: ConfettiCenterView()) {
                     Text("Confetti Animation")
                     Text("🎉")
                         .foregroundColor(.red)

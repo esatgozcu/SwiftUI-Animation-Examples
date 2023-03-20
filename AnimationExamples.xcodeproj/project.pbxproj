@@ -19,12 +19,13 @@
 		0B515C0829C1813A0094D991 /* CirclesRotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B515C0729C1813A0094D991 /* CirclesRotationView.swift */; };
 		0BBD2A9329C08659003FBA45 /* BlinkCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD2A9229C08659003FBA45 /* BlinkCircleView.swift */; };
 		0BBD2A9529C08661003FBA45 /* BlinkCircleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD2A9429C08661003FBA45 /* BlinkCircleVM.swift */; };
-		0BC38A3E29C3DFBE00BD08DB /* ConfettiAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A3D29C3DFBE00BD08DB /* ConfettiAnimationView.swift */; };
-		0BC38A4029C3E00A00BD08DB /* ConfettiVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A3F29C3E00A00BD08DB /* ConfettiVM.swift */; };
+		0BC38A3E29C3DFBE00BD08DB /* ConfettiCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A3D29C3DFBE00BD08DB /* ConfettiCenterView.swift */; };
+		0BC38A4029C3E00A00BD08DB /* ConfettiCenterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A3F29C3E00A00BD08DB /* ConfettiCenterVM.swift */; };
 		0BC38A4329C3E0F700BD08DB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A4229C3E0F700BD08DB /* Extension.swift */; };
 		0BC38A4829C3E15100BD08DB /* RoundedCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A4529C3E15000BD08DB /* RoundedCross.swift */; };
 		0BC38A4929C3E15100BD08DB /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A4629C3E15100BD08DB /* Triangle.swift */; };
 		0BC38A4A29C3E15100BD08DB /* SlimRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A4729C3E15100BD08DB /* SlimRectangle.swift */; };
+		0BC38A5229C86CD800BD08DB /* CircleRotationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A5129C86CD800BD08DB /* CircleRotationVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,12 +42,13 @@
 		0B515C0729C1813A0094D991 /* CirclesRotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesRotationView.swift; sourceTree = "<group>"; };
 		0BBD2A9229C08659003FBA45 /* BlinkCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkCircleView.swift; sourceTree = "<group>"; };
 		0BBD2A9429C08661003FBA45 /* BlinkCircleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkCircleVM.swift; sourceTree = "<group>"; };
-		0BC38A3D29C3DFBE00BD08DB /* ConfettiAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiAnimationView.swift; sourceTree = "<group>"; };
-		0BC38A3F29C3E00A00BD08DB /* ConfettiVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiVM.swift; sourceTree = "<group>"; };
+		0BC38A3D29C3DFBE00BD08DB /* ConfettiCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiCenterView.swift; sourceTree = "<group>"; };
+		0BC38A3F29C3E00A00BD08DB /* ConfettiCenterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiCenterVM.swift; sourceTree = "<group>"; };
 		0BC38A4229C3E0F700BD08DB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		0BC38A4529C3E15000BD08DB /* RoundedCross.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCross.swift; sourceTree = "<group>"; };
 		0BC38A4629C3E15100BD08DB /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		0BC38A4729C3E15100BD08DB /* SlimRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlimRectangle.swift; sourceTree = "<group>"; };
+		0BC38A5129C86CD800BD08DB /* CircleRotationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleRotationVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +81,9 @@
 		0B3C46D329BF38E000B4B38A /* AnimationExamples */ = {
 			isa = PBXGroup;
 			children = (
-				0B3C46D429BF38E000B4B38A /* AnimationExamplesApp.swift */,
 				0B3C46D629BF38E000B4B38A /* HomePage.swift */,
-				0B3C46E729BF3AF800B4B38A /* View */,
-				0B3C46E429BF3AE000B4B38A /* ViewModel */,
+				0B3C46D429BF38E000B4B38A /* AnimationExamplesApp.swift */,
+				0BC38A5029C86BEB00BD08DB /* Animations */,
 				0B3C46E829BF426900B4B38A /* Helper */,
 				0BC38A4429C3E13000BD08DB /* Shapes */,
 				0B3C46D829BF38E100B4B38A /* Assets.xcassets */,
@@ -97,29 +98,6 @@
 				0B3C46DB29BF38E100B4B38A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0B3C46E429BF3AE000B4B38A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0B3C46E529BF3AEC00B4B38A /* SnowFlakeVM.swift */,
-				0B3C46ED29BF481700B4B38A /* PaperPlaneVM.swift */,
-				0BBD2A9429C08661003FBA45 /* BlinkCircleVM.swift */,
-				0BC38A3F29C3E00A00BD08DB /* ConfettiVM.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0B3C46E729BF3AF800B4B38A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0B3C46E229BF3A1F00B4B38A /* SnowFlakeView.swift */,
-				0B3C46EB29BF481000B4B38A /* PaperPlaneView.swift */,
-				0BBD2A9229C08659003FBA45 /* BlinkCircleView.swift */,
-				0B515C0729C1813A0094D991 /* CirclesRotationView.swift */,
-				0BC38A3D29C3DFBE00BD08DB /* ConfettiAnimationView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		0B3C46E829BF426900B4B38A /* Helper */ = {
@@ -139,6 +117,63 @@
 				0BC38A4629C3E15100BD08DB /* Triangle.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		0BC38A4B29C86B6000BD08DB /* Confetti */ = {
+			isa = PBXGroup;
+			children = (
+				0BC38A3D29C3DFBE00BD08DB /* ConfettiCenterView.swift */,
+				0BC38A3F29C3E00A00BD08DB /* ConfettiCenterVM.swift */,
+			);
+			path = Confetti;
+			sourceTree = "<group>";
+		};
+		0BC38A4C29C86B6700BD08DB /* SnowFlake */ = {
+			isa = PBXGroup;
+			children = (
+				0B3C46E229BF3A1F00B4B38A /* SnowFlakeView.swift */,
+				0B3C46E529BF3AEC00B4B38A /* SnowFlakeVM.swift */,
+			);
+			path = SnowFlake;
+			sourceTree = "<group>";
+		};
+		0BC38A4D29C86B6E00BD08DB /* PaperPlane */ = {
+			isa = PBXGroup;
+			children = (
+				0B3C46ED29BF481700B4B38A /* PaperPlaneVM.swift */,
+				0B3C46EB29BF481000B4B38A /* PaperPlaneView.swift */,
+			);
+			path = PaperPlane;
+			sourceTree = "<group>";
+		};
+		0BC38A4E29C86B7F00BD08DB /* BlinkCircle */ = {
+			isa = PBXGroup;
+			children = (
+				0BBD2A9229C08659003FBA45 /* BlinkCircleView.swift */,
+				0BBD2A9429C08661003FBA45 /* BlinkCircleVM.swift */,
+			);
+			path = BlinkCircle;
+			sourceTree = "<group>";
+		};
+		0BC38A4F29C86B8A00BD08DB /* CircleRotation */ = {
+			isa = PBXGroup;
+			children = (
+				0B515C0729C1813A0094D991 /* CirclesRotationView.swift */,
+				0BC38A5129C86CD800BD08DB /* CircleRotationVM.swift */,
+			);
+			path = CircleRotation;
+			sourceTree = "<group>";
+		};
+		0BC38A5029C86BEB00BD08DB /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				0BC38A4C29C86B6700BD08DB /* SnowFlake */,
+				0BC38A4D29C86B6E00BD08DB /* PaperPlane */,
+				0BC38A4E29C86B7F00BD08DB /* BlinkCircle */,
+				0BC38A4F29C86B8A00BD08DB /* CircleRotation */,
+				0BC38A4B29C86B6000BD08DB /* Confetti */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BC38A3E29C3DFBE00BD08DB /* ConfettiAnimationView.swift in Sources */,
+				0BC38A3E29C3DFBE00BD08DB /* ConfettiCenterView.swift in Sources */,
 				0BBD2A9329C08659003FBA45 /* BlinkCircleView.swift in Sources */,
-				0BC38A4029C3E00A00BD08DB /* ConfettiVM.swift in Sources */,
+				0BC38A4029C3E00A00BD08DB /* ConfettiCenterVM.swift in Sources */,
 				0B515C0829C1813A0094D991 /* CirclesRotationView.swift in Sources */,
 				0B3C46EC29BF481000B4B38A /* PaperPlaneView.swift in Sources */,
 				0B3C46E629BF3AEC00B4B38A /* SnowFlakeVM.swift in Sources */,
@@ -222,6 +257,7 @@
 				0BC38A4A29C3E15100BD08DB /* SlimRectangle.swift in Sources */,
 				0B3C46EE29BF481700B4B38A /* PaperPlaneVM.swift in Sources */,
 				0B3C46EA29BF427900B4B38A /* RandomGenerator.swift in Sources */,
+				0BC38A5229C86CD800BD08DB /* CircleRotationVM.swift in Sources */,
 				0BC38A4329C3E0F700BD08DB /* Extension.swift in Sources */,
 				0BBD2A9529C08661003FBA45 /* BlinkCircleVM.swift in Sources */,
 				0BC38A4929C3E15100BD08DB /* Triangle.swift in Sources */,

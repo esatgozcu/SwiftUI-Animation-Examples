@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-class ConfettiVM: ObservableObject{
+class ConfettiCenterVM: ObservableObject{
     /// - Parameters:
     ///  - counter: on any change of this variable the animation is run
     ///  - num: amount of confettis
     ///  - colors: list of colors that is applied to the default shapes
     ///  - confettiSize: size that confettis and emojis are scaled to
-    ///  - rainHeight: vertical distance that confettis pass
+    ///  - dropHeight: vertical distance that confettis pass
     ///  - fadesOut: reduce opacity towards the end of the animation
+    ///  - fireworkEffect: every item will explosive in same circle line
     ///  - opacity: maximum opacity that is reached during the animation
     ///  - openingAngle: boundary that defines the opening angle in degrees
     ///  - closingAngle: boundary that defines the closing angle in degrees

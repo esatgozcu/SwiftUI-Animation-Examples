@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ConfettiAnimationView: View{
+struct ConfettiCenterView: View{
     
     @State var counter = 0
     
@@ -16,9 +16,6 @@ struct ConfettiAnimationView: View{
             Text("🎉").onTapGesture {
                 counter += 1
             }
-            /* Default */
-            //ConfettiView(counter: $counter)
-            
             /* FireworkEffect */
             /*ConfettiView(counter: $counter,
                          confettiVM: ConfettiVM(confettiNumber: 40,
@@ -40,6 +37,8 @@ struct ConfettiAnimationView: View{
                                                                     .sfSymbol(symbolName: "arrow.triangle.2.circlepath"),
                                                                     .sfSymbol(symbolName: "square.and.arrow.up")],
                                                                    confettiSize: 30, explosionAnimDuration: 0.7))*/
+            /* Default */
+            ConfettiView(counter: $counter)
         }
     }
 }
@@ -47,7 +46,7 @@ struct ConfettiAnimationView: View{
 struct ConfettiView: View{
     
     @Binding var counter: Int
-    @StateObject var confettiVM = ConfettiVM()
+    @StateObject var confettiVM = ConfettiCenterVM()
     @State var animate = 0
     @State var finishedAnimationCounter = 0
     @State var firstAppear = false
@@ -77,7 +76,7 @@ struct ConfettiView: View{
 
 struct ConfettiContainer: View {
     
-    @StateObject var confettiVM: ConfettiVM
+    @StateObject var confettiVM: ConfettiCenterVM
     @Binding var finishedAnimationCounter:Int
     @State var firstAppear = true
 
@@ -101,7 +100,7 @@ struct ConfettiContainer: View {
 struct ConfettiFrame: View{
     //For Animation.timingCurve
     //https://matthewlein.com/tools/ceaser
-    @StateObject var confettiVM: ConfettiVM
+    @StateObject var confettiVM: ConfettiCenterVM
     @State var location: CGPoint = CGPoint(x: 0, y: 0)
     @State var opacity: Double = 0.0
 
@@ -127,7 +126,7 @@ struct ConfettiFrame: View{
                     location.y = -distance * sin(deg2rad(randomAngle))
                 }
 
-                DispatchQueue.main.asyncAfter(deadline: .now() + getDelayBeforeRainAnimation()) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + getDelayBeforeDropAnimation()) {
                     withAnimation(Animation.timingCurve(0.12, 0, 0.39, 0, duration: confettiVM.dropAnimationDuration)) {
                         location.y += confettiVM.dropHeight
                         opacity = confettiVM.fadesOut ? 0 : confettiVM.opacity
@@ -153,7 +152,7 @@ struct ConfettiFrame: View{
         }
         return confettiVM.radius
     }
-    func getDelayBeforeRainAnimation() -> TimeInterval {
+    func getDelayBeforeDropAnimation() -> TimeInterval {
         confettiVM.explosionAnimationDuration *  0.1
     }
     func deg2rad(_ number: CGFloat) -> CGFloat {
