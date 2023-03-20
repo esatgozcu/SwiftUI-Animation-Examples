@@ -119,13 +119,13 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
-		0BC38A4B29C86B6000BD08DB /* Confetti */ = {
+		0BC38A4B29C86B6000BD08DB /* ConfettiCenter */ = {
 			isa = PBXGroup;
 			children = (
 				0BC38A3D29C3DFBE00BD08DB /* ConfettiCenterView.swift */,
 				0BC38A3F29C3E00A00BD08DB /* ConfettiCenterVM.swift */,
 			);
-			path = Confetti;
+			path = ConfettiCenter;
 			sourceTree = "<group>";
 		};
 		0BC38A4C29C86B6700BD08DB /* SnowFlake */ = {
@@ -171,7 +171,7 @@
 				0BC38A4D29C86B6E00BD08DB /* PaperPlane */,
 				0BC38A4E29C86B7F00BD08DB /* BlinkCircle */,
 				0BC38A4F29C86B8A00BD08DB /* CircleRotation */,
-				0BC38A4B29C86B6000BD08DB /* Confetti */,
+				0BC38A4B29C86B6000BD08DB /* ConfettiCenter */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
