@@ -36,6 +36,12 @@ struct HomePage: View {
                         .foregroundColor(.red)
                         .frame(width: 20, height: 20)
                 }
+                NavigationLink(destination: FireworkCenterView()) {
+                    Text("Firework Animation")
+                    Text("🎆")
+                        .foregroundColor(.red)
+                        .frame(width: 20, height: 20)
+                }
             }
         }
     }

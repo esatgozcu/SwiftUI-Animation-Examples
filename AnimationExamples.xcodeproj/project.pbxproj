@@ -17,6 +17,8 @@
 		0B3C46EC29BF481000B4B38A /* PaperPlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C46EB29BF481000B4B38A /* PaperPlaneView.swift */; };
 		0B3C46EE29BF481700B4B38A /* PaperPlaneVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C46ED29BF481700B4B38A /* PaperPlaneVM.swift */; };
 		0B515C0829C1813A0094D991 /* CirclesRotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B515C0729C1813A0094D991 /* CirclesRotationView.swift */; };
+		0BB8837929D0670F00ED56FB /* FireworkCenterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8837729D0670F00ED56FB /* FireworkCenterVM.swift */; };
+		0BB8837A29D0670F00ED56FB /* FireworkCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8837829D0670F00ED56FB /* FireworkCenterView.swift */; };
 		0BBD2A9329C08659003FBA45 /* BlinkCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD2A9229C08659003FBA45 /* BlinkCircleView.swift */; };
 		0BBD2A9529C08661003FBA45 /* BlinkCircleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD2A9429C08661003FBA45 /* BlinkCircleVM.swift */; };
 		0BC38A3E29C3DFBE00BD08DB /* ConfettiCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC38A3D29C3DFBE00BD08DB /* ConfettiCenterView.swift */; };
@@ -40,6 +42,8 @@
 		0B3C46EB29BF481000B4B38A /* PaperPlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperPlaneView.swift; sourceTree = "<group>"; };
 		0B3C46ED29BF481700B4B38A /* PaperPlaneVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperPlaneVM.swift; sourceTree = "<group>"; };
 		0B515C0729C1813A0094D991 /* CirclesRotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesRotationView.swift; sourceTree = "<group>"; };
+		0BB8837729D0670F00ED56FB /* FireworkCenterVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireworkCenterVM.swift; sourceTree = "<group>"; };
+		0BB8837829D0670F00ED56FB /* FireworkCenterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireworkCenterView.swift; sourceTree = "<group>"; };
 		0BBD2A9229C08659003FBA45 /* BlinkCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkCircleView.swift; sourceTree = "<group>"; };
 		0BBD2A9429C08661003FBA45 /* BlinkCircleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkCircleVM.swift; sourceTree = "<group>"; };
 		0BC38A3D29C3DFBE00BD08DB /* ConfettiCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiCenterView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		0BB8837629D066DF00ED56FB /* FireworkCenter */ = {
+			isa = PBXGroup;
+			children = (
+				0BB8837829D0670F00ED56FB /* FireworkCenterView.swift */,
+				0BB8837729D0670F00ED56FB /* FireworkCenterVM.swift */,
+			);
+			path = FireworkCenter;
+			sourceTree = "<group>";
+		};
 		0BC38A4429C3E13000BD08DB /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +180,7 @@
 		0BC38A5029C86BEB00BD08DB /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				0BB8837629D066DF00ED56FB /* FireworkCenter */,
 				0BC38A4C29C86B6700BD08DB /* SnowFlake */,
 				0BC38A4D29C86B6E00BD08DB /* PaperPlane */,
 				0BC38A4E29C86B7F00BD08DB /* BlinkCircle */,
@@ -254,6 +268,7 @@
 				0B3C46E629BF3AEC00B4B38A /* SnowFlakeVM.swift in Sources */,
 				0BC38A4829C3E15100BD08DB /* RoundedCross.swift in Sources */,
 				0B3C46D729BF38E000B4B38A /* HomePage.swift in Sources */,
+				0BB8837A29D0670F00ED56FB /* FireworkCenterView.swift in Sources */,
 				0BC38A4A29C3E15100BD08DB /* SlimRectangle.swift in Sources */,
 				0B3C46EE29BF481700B4B38A /* PaperPlaneVM.swift in Sources */,
 				0B3C46EA29BF427900B4B38A /* RandomGenerator.swift in Sources */,
@@ -263,6 +278,7 @@
 				0BC38A4929C3E15100BD08DB /* Triangle.swift in Sources */,
 				0B3C46E329BF3A1F00B4B38A /* SnowFlakeView.swift in Sources */,
 				0B3C46D529BF38E000B4B38A /* AnimationExamplesApp.swift in Sources */,
+				0BB8837929D0670F00ED56FB /* FireworkCenterVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
