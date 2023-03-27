@@ -39,8 +39,8 @@ class FireworkCenterVM: ObservableObject{
          ],
          pieceSize: CGFloat = 10.0,
          radius: CGFloat = 100,
-         repetitions: Int = 15,
-         repetitionInterval: Double = 0.5,
+         repetitions: Int = 0,
+         repetitionInterval: Double = 1.0,
          explosionAnimDuration: Double = 1.2,
          launchAnimDuration: Double = 3.0
     ) {
