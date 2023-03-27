@@ -39,8 +39,8 @@ class FireworkCenterVM: ObservableObject{
          ],
          pieceSize: CGFloat = 10.0,
          radius: CGFloat = 100,
-         repetitions: Int = 0,
-         repetitionInterval: Double = 1.0,
+         repetitions: Int = 15,
+         repetitionInterval: Double = 0.5,
          explosionAnimDuration: Double = 1.2,
          launchAnimDuration: Double = 3.0
     ) {
@@ -57,19 +57,14 @@ class FireworkCenterVM: ObservableObject{
     func getShapes() -> [AnyView]{
         var shapes = [AnyView]()
         for firework in pieceType{
-            for color in colors{
-                switch firework {
-                case .shape(_):
-                    shapes.append(AnyView(firework.view.foregroundColor(color).frame(width: pieceSize, height: pieceSize, alignment: .center)))
-                default:
-                    shapes.append(AnyView(firework.view.foregroundColor(color).font(.system(size: pieceSize))))
-                }
+            switch firework {
+            case .shape(_):
+                shapes.append(AnyView(firework.view.frame(width: pieceSize, height: pieceSize, alignment: .center)))
+            default:
+                shapes.append(AnyView(firework.view.font(.system(size: pieceSize))))
             }
         }
         return shapes
-    }
-    func getAnimDuration() -> CGFloat{
-        return explosionAnimationDuration + launchAnimDuration
     }
 }
 

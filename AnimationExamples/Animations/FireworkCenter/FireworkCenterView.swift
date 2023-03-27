@@ -60,14 +60,14 @@ struct FireworkContainer: View {
     @StateObject var fireworkCenterVM: FireworkCenterVM
     @Binding var finishedAnimationCounter:Int
     @State var firstAppear = true
-    @State var randomX = Double.random(in: -(UIScreen.main.bounds.size.width/2)...UIScreen.main.bounds.size.width/2)
-    @State var randomY = Double.random(in: 100.0...UIScreen.main.bounds.size.height-100)
+    @State var randomX = Double.random(in: -100...100)
+    @State var randomY = Double.random(in: 200.0...UIScreen.main.bounds.size.height-200)
     @State var location: CGPoint = CGPoint(x: 0, y: 0)
     
     var body: some View{
         ZStack{
             ForEach(0..<fireworkCenterVM.pieceCount, id:\.self){ i in
-                FireworkFrame(fireworkCenterVM: fireworkCenterVM, index: i, launchHeight: randomY)
+                FireworkFrame(fireworkCenterVM: fireworkCenterVM, index: i, launchHeight: randomY, color: getColor())
             }
         }
         .offset(x: location.x, y: location.y)
@@ -77,7 +77,7 @@ struct FireworkContainer: View {
                     location.x = randomX
                     location.y = -randomY
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + fireworkCenterVM.getAnimDuration()) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + getAnimDuration()) {
                     //Clear
                     self.finishedAnimationCounter += 1
                 }
@@ -85,25 +85,45 @@ struct FireworkContainer: View {
             }
         }
     }
+    func getAnimDuration() -> CGFloat{
+        return fireworkCenterVM.explosionAnimationDuration + fireworkCenterVM.launchAnimDuration
+    }
+    func getColor() -> Color{
+        return fireworkCenterVM.colors.randomElement()!
+    }
 }
 
 struct FireworkFrame: View{
-    //For Animation.timingCurve
-    //https://matthewlein.com/tools/ceaser
+
     @StateObject var fireworkCenterVM: FireworkCenterVM
     @State var location: CGPoint = CGPoint(x: 0, y: 0)
     @State var index: Int
     @State var launchHeight: CGFloat
+    @State var percentage: CGFloat = 0.0
+    @State var strokeWidth: CGFloat = 2.0
+    @State var color: Color
     
     var body: some View{
-        FireworkItem(fireworkCenterVM: fireworkCenterVM, shape: getShape(), size: fireworkCenterVM.pieceSize)
-            .offset(x: location.x, y: location.y)
-            .onAppear(){
-                withAnimation(Animation.timingCurve(0.1, 1.0, 0, 1, duration: getAnimationDuration()).delay(fireworkCenterVM.launchAnimDuration)) {
-                    location.x = getDistance() * cos(deg2rad(getRandomAngle()))
-                    location.y = -getDistance() * sin(deg2rad(getRandomAngle()))
-                }
+        ZStack{
+            FireworkItem(fireworkCenterVM: fireworkCenterVM, shape: getShape(), size: fireworkCenterVM.pieceSize, color: color)
+                .offset(x: location.x, y: location.y)
+            Path { path in
+                path.move(to: .zero)
+                path.addLine(to: CGPoint(x: location.x, y: location.y))
+            }.trim(from: 0.0, to: percentage)
+                .stroke(color, lineWidth: strokeWidth)
+                .frame(width: 1.0, height: 1.0)
+        }.onAppear(){
+            withAnimation(
+                Animation.timingCurve(0.0, 1.0, 1.0, 1.0, duration: getAnimationDuration())
+                    .delay(fireworkCenterVM.launchAnimDuration).repeatCount(1)
+            ){
+                location.x = getDistance() * cos(deg2rad(getRandomAngle()))
+                location.y = -getDistance() * sin(deg2rad(getRandomAngle()))
+                percentage = 1.0
+                strokeWidth = 0.0
             }
+        }
     }
     func getRandomAngle() -> CGFloat{
         return (360.0 / Double(fireworkCenterVM.pieceCount)) * Double(index)
@@ -133,6 +153,7 @@ struct FireworkItem: View {
     @StateObject var fireworkCenterVM: FireworkCenterVM
     @State var shape: AnyView
     @State var size: CGFloat
+    @State var color: Color
     @State var scale = 1.0
     @State var move = false
 
@@ -140,6 +161,7 @@ struct FireworkItem: View {
         shape
             .frame(width: size, height: size)
             .scaleEffect(scale)
+            .foregroundColor(color)
             .onAppear() {
                 withAnimation(
                     Animation

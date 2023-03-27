@@ -3,11 +3,8 @@
 ### Step by step understand compose animation logic.
 
 This repository developed for Compose animation. There are a lot of animation with different concepts. You can select what you want and customize what you needed.
-<br/>
-<img src="https://user-images.githubusercontent.com/35576161/225820649-a1b78869-d21f-46a8-8dcd-c1cca9c87c4f.png" width="426" height="426"/>
-<br/>
 
-<br/>
+<img width="213" alt="Screenshot 2023-03-23 at 4 55 32 PM" src="https://user-images.githubusercontent.com/35576161/227126400-29ae3282-4c29-4db8-874d-8a0cedd93191.png">
 
 ## Simple Animations
 
@@ -26,6 +23,14 @@ This repository developed for Compose animation. There are a lot of animation wi
 | **#[Image with SF Symbol](AnimationExamples/Animations/ConfettiCenter)** | **#[Emoji - Text](AnimationExamples/Animations/ConfettiCenter)** |
 | --- | --- |
 | <img src="https://user-images.githubusercontent.com/35576161/226273152-e8701691-0940-4716-a887-55ca8f6691fd.gif" width="300"/> | <img src="https://user-images.githubusercontent.com/35576161/226273515-eb45eb18-db51-46df-9451-2b51b766926f.gif" width="300"/> |
+
+<br/>
+
+## Firework Animations
+
+| **#[Firework](AnimationExamples/Animations/FireworkCenter)** |
+| --- |
+| <img src="https://user-images.githubusercontent.com/35576161/227872111-01d7348c-06d0-4749-840a-73722116e531.gif" width="400"/> |
 
 <br/>
 
