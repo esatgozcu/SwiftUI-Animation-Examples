@@ -1,8 +1,8 @@
 # SwiftUI Animation Examples
 
-### Step by step understand compose animation logic.
+### Step by step understand swiftUI animation logic.
 
-This repository developed for Compose animation. There are a lot of animation with different concepts. You can select what you want and customize what you needed.
+This repository developed for swiftUI animation. There are a lot of animation with different concepts. You can select what you want and customize what you needed.
 
 <img width="213" alt="Screenshot 2023-03-23 at 4 55 32 PM" src="https://user-images.githubusercontent.com/35576161/227126400-29ae3282-4c29-4db8-874d-8a0cedd93191.png">
 
